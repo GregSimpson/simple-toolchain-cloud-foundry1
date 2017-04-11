@@ -14,6 +14,9 @@ var cfenv = require('cfenv');
 
 // create a new express server
 var app = express();
+app.get('/', function (req, res) {
+	res.send('Welcome to Bluemix Continuous Delivery');
+});
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
